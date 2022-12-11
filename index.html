@@ -35,11 +35,25 @@
                 ></a-image>
             </a-marker>
             
-            
-       <a-nft type="nft" url="/assets/928533-1.output">
-        <a-box position="80 80 0" scale="70 70 70" color="tomato" wireframe="true" animation="property: rotation; to: 0 360 0; loop: true; dur: 20000" ></a-box>
-      </a-nft>
-
+     
+ <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assetspattern-928533-1.output.patt/"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-image
+                    src="assets/asset.png"
+                    scale="1 1 1"
+                    class="clickable"
+                    rotation="-90 0 0"
+                    gesture-handler
+                ></a-image>
+            </a-marker>
         
 
             <a-entity camera></a-entity>

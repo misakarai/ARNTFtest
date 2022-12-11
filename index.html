@@ -5,6 +5,8 @@
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
+  </head>
     </head>
 
     <body style="margin: 0; overflow: hidden;">
@@ -15,6 +17,12 @@
             id="scene"
             embedded
             gesture-detector
+            mindar-image="imageTargetSrc: ./target.mind;" 
+           color-space="sRGB" 
+           renderer="colorManagement: true, 
+           physicallyCorrectLights" 
+          device-orientation-permission-ui="enabled: false"
+            
         >
             <a-marker
                 id="animated-marker"
@@ -55,7 +63,9 @@
                 ></a-image>
             </a-marker>
         
-
+<a-entity mindar-image-target="targetIndex: 0">
+        <a-box></a-box>
+      </a-entity>
             <a-entity camera></a-entity>
         </a-scene>
     </body>
